@@ -1,0 +1,20 @@
+import webbrowser
+
+# Open the website in a new tab
+webbrowser.open_new_tab('https://www.wcostream.net/anime/spongebob-squarepants')
+
+# Wait for the current episode to finish playing
+time.sleep(episode_duration)
+
+# Find the next episode button on the page
+next_button = driver.find_element_by_css_selector('button.next-episode')
+
+# Click the next episode button
+next_button.click()
+
+# Wait for the next episode to load
+time.sleep(5)
+
+# Play the next episode
+play_button = driver.find_element_by_css_selector('button.play-button')
+play_button.click()
